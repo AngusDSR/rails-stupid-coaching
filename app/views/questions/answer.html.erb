@@ -1,0 +1,16 @@
+<% question = params["question"] %>
+<div class="h-100 p-3 text-bg-dark rounded-3">
+  <h2><%= question %></h2>
+  <p>
+  <% if question == "I am going to work right now!" %>
+    <% "Great" %>
+  <% end %>
+  <% if question == "I am going to work right now!" %>%
+    <%=  "Great" %>
+  <% elsif question[-1] == "?" %>
+    <%= "Silly question, get dressed and go to work!" %>
+  <% else %>
+    <%= "I don't care, get dressed and go to work!" %>
+  <% end %>
+  </p>
+</div>
