@@ -1,16 +1,26 @@
 <% question = params["question"] %>
-<div class="h-100 p-3 text-bg-dark rounded-3">
-  <h2><%= question %></h2>
-  <p>
-  <% if question == "I am going to work right now!" %>
-    <% "Great" %>
-  <% end %>
-  <% if question == "I am going to work right now!" %>%
-    <%=  "Great" %>
-  <% elsif question[-1] == "?" %>
-    <%= "Silly question, get dressed and go to work!" %>
-  <% else %>
-    <%= "I don't care, get dressed and go to work!" %>
-  <% end %>
-  </p>
+<div class="h-100 p-2 mb-2 text-bg-dark rounded-3">
+  <blockquote class="blockquote mb-0">
+    <p><%= question %></p>
+    <footer class="blockquote-footer"><cite title="Source Title">You</cite></footer>
+  </blockquote>
+</div>
+
+<div class="h-100 p-2 mb-2 .bg-primary rounded-3">
+  <blockquote class="blockquote mb-0">
+    <p class="fw-bold">
+      <% if question == "I am going to work" %>
+        <%=  "Great!" %>
+      <% elsif question[-1] == "?" %>
+        <%= "Silly question, get dressed and go to work!" %>
+      <% else %>
+        <%= "I don't care, get dressed and go to work!" %>
+      <% end %>
+    </p>
+    <footer class="blockquote-footer"><cite title="Source Title">Coach</cite></footer>
+  </blockquote>
+</div>
+
+<%= link_to "Ask a new question", ask_path, class: 'btn text-dark  fw-bold', style: 'background-color:rgba(13, 202, 240, 0.5);' %>
+
 </div>
