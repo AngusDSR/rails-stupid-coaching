@@ -1,12 +1,12 @@
 <% question = params["question"] %>
-<div class="h-100 p-2 mb-2 text-bg-dark rounded-3">
+<div class="w-50 p-3 bg-info bg-opacity-10 border border-5 border-info border-end-0 border-top-0 border-bottom-0 mb-4">
   <blockquote class="blockquote mb-0">
-    <p><%= question %></p>
+    <p class="fw-bold"><%= question %></p>
     <footer class="blockquote-footer"><cite title="Source Title">You</cite></footer>
   </blockquote>
 </div>
 
-<div class="h-100 p-2 mb-2 .bg-primary rounded-3">
+<div class="w-50 p-3 bg-warning bg-opacity-10 border border-5 border-warning border-end-0 border-top-0 border-bottom-0 mb-4">
   <blockquote class="blockquote mb-0">
     <p class="fw-bold">
       <% if question == "I am going to work" %>
